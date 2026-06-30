@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de filmes</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+</head>
+<body>
+    <header>
+        <h1>Minha lista de filmes favoritos</h1>
+        <p>Seja bem-vindo! Cadastre seus filmes favoritos</p>
+    </header>
+    <main>
+        <form id="formFilme">
+            <label for="titulo">Titulo do filme:</label>
+            <input type="text" id="titulo" placeholder="digite aqui" required>
+            <label for="genero">Gênero:</label>
+            <input type="text" id="genero" placeholder="digite aqui" required>
+            <label for="ano">Ano de lançamento do filme:</label>
+            <input type="number" id="ano" min="1900" max="2026" placeholder="ano" required>
+            <button id="botao" type="submit">Cadastrar filme</button>
+            <button id="botaoLimpar" type="reset">Limpar campos</button>
+        </form>
+        <section id="listaFilmes">
+        </section>
+    </main>
+<script src="js/script.js"></script>
+
+<footer>
+    <p>&copy; 2023 Catálogo de Filmes. Todos os direitos reservados.</p>
+</footer>
+</body>
+</html>
