@@ -207,6 +207,7 @@ footer {
     max-width: 350px;
     line-height: 2.5;
     gap: 1rem;
+    color: var(--background-secondary);
 }
 
 .filme-card:hover {

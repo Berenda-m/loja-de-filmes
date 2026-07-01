@@ -21,37 +21,65 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="indicados.html">Indicados</a></li>
                     <li><a href="contato.html">Contato</a></li>
+                    <li><button>
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </button></li>
 
                 </ul>
             </nav>
-        </div> 
+        </div>
         <!-- Banner do site -->
         <section class="banner"></section>
     </header>
     <main>
         <section class="cadastro"> <!--título do cadastro de filmes-->
-                <h2>Cadastre seus filmes favoritos <i class="fa-solid fa-film"></i></h2>
-<div class="card">
-            <form id="formFilme"> <!--formulário de cadastro de filmes-->
-                <div class="campo">
-                    <label for="titulo">Titulo do filme:</label>
-                    <input type="text" id="titulo" placeholder="digite aqui" required>
-                </div>
+            <h2>Cadastre seus filmes favoritos <i class="fa-solid fa-film"></i></h2>
+            <div class="card">
+                <form id="formFilme"> <!--formulário de cadastro de filmes-->
+                    <div class="campo">
+                        <label for="titulo">Titulo do filme:</label>
+                        <input type="text" id="titulo" placeholder="Digite aqui" required>
+                    </div>
 
-                <div class="campo">
-                    <label for="genero">Gênero:</label>
-                    <input type="text" id="genero" placeholder="digite aqui" required>
-                </div>
-                <div class="campo">
-                    <label for="ano">Ano de lançamento:</label>
-                    <input type="number" id="ano" min="1900" max="2026" placeholder="ano" required>
-                </div>
-                <div class="botoes">
-                    <button class="botao" type="submit">Cadastrar filme</button>
+                    <div class="campo">
+                        <label for="genero">Gênero:</label>
+                        <input type="text" id="genero" list="listaGeneros" placeholder="Escolha um gênero" required>
+                        <datalist id="listaGeneros">
+                            <option value="">Selecione um gênero</option>"
+                            <option>Ação</option>
+                            <option>Aventura</option>
+                            <option>Animação</option>
+                            <option>Biografia</option>
+                            <option>Comédia</option>
+                            <option>Comédia Romântica</option>
+                            <option>Crime</option>
+                            <option>Documentário</option>
+                            <option>Drama</option>
+                            <option>Fantasia</option>
+                            <option>Faroeste</option>
+                            <option>Ficção Científica</option>
+                            <option>Guerra</option>
+                            <option>Histórico</option>
+                            <option>Musical</option>
+                            <option>Mistério</option>
+                            <option>Romance</option>
+                            <option>Suspense</option>
+                            <option>Terror</option>
+                            <option>Thriller</option>
 
-                    <button class="botao" id="botaoLimpar" type="reset">Limpar campos</button>
-                </div>
-            </form></div>
+                        </datalist>
+                    </div>
+                    <div class="campo">
+                        <label for="ano">Ano de lançamento:</label>
+                        <input type="number" id="ano" min="1900" max="2026" placeholder="Ano" required>
+                    </div>
+                    <div class="botoes">
+                        <button class="botao" type="submit">Cadastrar filme</button>
+
+                        <button class="botao" id="botaoLimpar" type="reset">Limpar campos</button>
+                    </div>
+                </form>
+            </div>
 
         </section> <!--para o JavaScript-->
         <section id="listaFilmes">
