@@ -12,11 +12,11 @@ formFilme.addEventListener('submit', function(event) {
         ano: parseInt(ano.value)
     };
     listaFilmes.innerHTML += `
-        <div>
+        <div class="filme-card">
             <h3>🎥 ${filme.titulo}</h3>
             <p> 🎭 Gênero: ${filme.genero}</p>
             <p> 📆 Ano: ${filme.ano}</p>
-            <button onclick="this.parentElement.remove()">Remover</button>
+            <button class="btn-remover" onclick="this.parentElement.remove()"> <i class="fa-solid fa-trash-can"></i> </button>
         </div>
     `;
     titulo.value = '';

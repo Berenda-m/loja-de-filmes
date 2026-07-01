@@ -7,36 +7,62 @@
     padding: 0;
 }
 
-/*Variáveis de cores*/
 :root {
-    --background: #e0e1dd;
-    --cor-secundaria: #778da9;
-    --texto: #2e5cb1e2;
-    --background-secundario: #415a77;
+    /* Fundo */
+    --background: #F5F3F4;
+    --background-secondary: #FFFFFF;
+    --surface: #D3D3D3;
+
+    /* Cores principais */
+    --primary: #BA181B;
+    --primary-hover: #E5383B;
+    --secondary: #A4161A;
+    --accent: #660708;
+
+    /* Texto */
+    --text-primary: #161A1D;
+    --text-secondary: #0B090A;
+    --text-light: #FFFFFF;
+
+    /* Extras */
+    --border: #B1A7A6;
 }
 
-/*Configuração da pege total*/
+/*tag da fonte do Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
+/*Configuração da page total*/
 body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: "Poiret One", sans-serif;
+    font-size: 1.4rem;
     background-color: var(--background);
-    color: var(--texto);
+    color: var(--text-primary);
     margin: 0;
     padding: 0;
 }
 
-header {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
+main {
+    padding-bottom: 4rem;
 }
 
-nav {
-    display: flex;
-    gap: 2rem;
+/*Configuração do cabeçalho*/
+h1 {
+    font-size: 4rem;
+    letter-spacing: .5rem;
+    color: var(--text-secondary);
 }
 
+.topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+    color: var(--text-primary);
+}
+
+/*Configuração do menu de navegação*/
 nav a {
-    font-family: 'EB Garamond, serif';
+    font-family: "EB Garamond", serif;
     font-size: 1.15rem;
     color: var(--text-primary);
     transition: .3s;
@@ -46,18 +72,167 @@ nav a {
 
 nav ul {
     display: flex;
-    justify-content: center;
     gap: 2rem;
-    margin-top: 1rem;
     list-style: none;
 }
 
+nav a:hover {
+    color: var(--primary);
+    text-shadow: 0 0 5px var(--accent);
+    transform: scale(1.02);
+}
+
+/*Configuração do formulário de cadastro de filmes*/
+.cadastro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    padding: 4rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    justify-content: center;
+    width: 100%;
+    max-width: 450px;
+}
+
+/*Configuração dos inputs do formulário*/
+form input {
+    padding: .7rem;
+}
+
+
+input {
+    padding: .8rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-family: inherit;
+    width: 100%;
+}
+
+input:focus {
+    outline: 2px solid var(--primary);
+}
+
+label {
+    font-size: 1.3rem;
+    color: var(--text-light);
+    text-shadow: 0 0 8px var(--border);
+}
+
+/*Configuração do banner do site*/
 .banner {
-    background-image: url("/images/tentativa2.jpg");
-    height: 350px;
+    background-image: url("/images/cinema2.webp");
+    width: 100%;
+    height: 400px;
     background-repeat: no-repeat;
     background-size: cover;
-
-
-
+    background-position: center;
 }
+
+/*Configuração dos botões do formulário*/
+.botoes {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    max-width: 100%;
+}
+
+
+button {
+    background: var(--border);
+    color: var(--text-light);
+    border: none;
+    padding: .8rem 1.5rem;
+    cursor: pointer;
+    transition: .3s;
+    border-radius: 20px;
+    text-shadow: 0 0 8px var(--border);
+}
+
+button:hover {
+    background: var(--primary-hover);
+}
+
+/*Configuração dos cards da ficha de cadastro*/
+.card {
+    background-color: var(--primary);
+    padding: 30px 30px;
+    border-radius: 50px;
+    border-color: var(--secondary);
+    border: 1px solid var(--secondary);
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    transform: scale(1.02);
+    box-shadow: 0 10px 25px rgba(217, 23, 23, 0.886);
+}
+
+/*rodapé do site*/
+footer {
+    background-color: var(--primary);
+    color: var(--text-light);
+    text-align: center;
+    margin-top: 3rem;
+    padding: 2rem;
+}
+
+/*Configuração dos cards que vem do Js*/
+.filme-card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .15);
+    transition: .3s;
+    margin-left: 2rem;
+    width: 100%;
+    max-width: 350px;
+    line-height: 2.5;
+    gap: 1rem;
+}
+
+.filme-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .2);
+}
+#listaFilmes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.btn-remover {
+    background-color: var(--border);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-top: 1rem;
+    width: 80px;
+    height: 45px;
+}
+
+.btn-remover:hover {
+    background-color: var(--primary-hover);
+}
+
