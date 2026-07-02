@@ -23,3 +23,4 @@ formFilme.addEventListener('submit', function(event) {
     genero.value = '';
     ano.value = '';
 });
+
