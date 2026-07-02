@@ -28,6 +28,19 @@
     --border: #B1A7A6;
 }
 
+/*root modo escuro*/
+.dark{
+    --background: #0a0a0a;
+    --color: var(--text-light);
+}
+.dark h1, h2, h3 {
+    color: var(--text-light)
+}
+.dark nav a {
+    color:  var(--text-light)
+}
+
+
 /*tag da fonte do Google Fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
 

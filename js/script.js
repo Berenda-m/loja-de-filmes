@@ -1,12 +1,13 @@
 
-const formFilme = document.getElementById('formFilme');
-const titulo = document.getElementById('titulo');
-const genero = document.getElementById('genero');
-const ano = document.getElementById('ano');
-const listaFilmes = document.getElementById('listaFilmes');
-formFilme.addEventListener('submit', function(event) {
+let formFilme = document.getElementById('formFilme');
+let botaoDark = document.getElementById('dark')
+let titulo = document.getElementById('titulo');
+let genero = document.getElementById('genero');
+let ano = document.getElementById('ano');
+let listaFilmes = document.getElementById('listaFilmes');
+formFilme.addEventListener('submit', function (event) {
     event.preventDefault();
-    const filme = {
+    let filme = {
         titulo: titulo.value,
         genero: genero.value,
         ano: parseInt(ano.value)
@@ -23,4 +24,9 @@ formFilme.addEventListener('submit', function(event) {
     genero.value = '';
     ano.value = '';
 });
+botaoDark.addEventListener("click", function() {
+    document.body.classList.toggle("dark");
+});
+    
+
 
