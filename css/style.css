@@ -33,7 +33,7 @@
     --background: #0a0a0a;
     --color: var(--text-light);
 }
-.dark h1, h2, h3 {
+.dark h1, h3 {
     color: var(--text-light)
 }
 .dark nav a {
@@ -205,6 +205,12 @@ footer {
     margin-top: 3rem;
     padding: 2rem;
 }
+footer a{
+    color: var(--text-light);
+    font-size: 0.9rem;
+    font-weight: 400;
+    text-decoration: none;
+}
 
 /*Configuração dos cards que vem do Js*/
 .filme-card {
@@ -234,7 +240,7 @@ footer {
     gap: 2rem;
     padding: 2rem;
 }
-
+/*botão de remover*/
 .btn-remover {
     background-color: var(--border);
     color: white;
@@ -249,5 +255,7 @@ footer {
 .btn-remover:hover {
     background-color: var(--primary-hover);
 }
-
-
+/*page de indicação*/
+.sinopse{
+    list-style: none;
+}
